@@ -15,4 +15,4 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y minecraft-overviewer
 
 ADD assets/app /app
 
-CMD ["/usr/bin/overviewer.py", "-c", "/app/config.py"]
+CMD ["/usr/bin/nice", "-19", "/usr/bin/overviewer.py", "-c", "/app/config.py"]
